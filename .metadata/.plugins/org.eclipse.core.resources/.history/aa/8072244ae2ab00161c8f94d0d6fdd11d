@@ -1,0 +1,36 @@
+package assignment_bookmanager;
+
+import java.util.Scanner;
+
+public class BookManager {
+	Scanner s = new Scanner(System.in);
+	
+	void list(){
+	}
+	
+	void search(){
+		
+	}
+	void start(){
+		boolean go = true;
+		while(go){
+			System.out.println("1) 도서목록   2)도서검색   3)종료");
+			int select = s.nextInt();
+			switch(select){
+			case 1:
+				list();
+				break;
+			case 2:
+				search();
+				break;
+			case 3:
+				go = false;
+				break;
+			}
+		}
+	}
+	public static void main(String[] args) {
+		BookManager t = new BookManager();
+		t.start();
+	}
+}

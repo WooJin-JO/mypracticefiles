@@ -1,10 +1,7 @@
 package practice;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 public class AddFriend {
 	Scanner s = new Scanner(System.in);

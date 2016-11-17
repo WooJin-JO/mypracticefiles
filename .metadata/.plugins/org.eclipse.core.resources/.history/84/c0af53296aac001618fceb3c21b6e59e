@@ -1,0 +1,88 @@
+package assignment_bookmanager;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class BookManager {
+	Scanner s = new Scanner(System.in);
+	ArrayList<Book> list = new ArrayList<>();
+	Book b1 = (Book)list.get(0);
+	Book b2 = (Book)list.get(1);
+	Book b3 = (Book)list.get(2);
+	Book b4 = (Book)list.get(3);
+	Book b5 = (Book)list.get(4);
+	Book b6 = (Book)list.get(5);
+	Book b7 = (Book)list.get(6);
+	Book b8 = (Book)list.get(7);
+	Book b9 = (Book)list.get(8);
+	Book b10 = (Book)list.get(9);
+	Book b11 = (Book)list.get(10);
+	Book b12 = (Book)list.get(11);
+	Book b13 = (Book)list.get(12);
+	Book b14 = (Book)list.get(13);
+	Book b15 = (Book)list.get(14);
+	Book b16 = (Book)list.get(15);
+	Book b17 = (Book)list.get(16);
+	Book b18 = (Book)list.get(17);
+	Book b19 = (Book)list.get(18);
+	Book b20 = (Book)list.get(19);
+	void list(){
+		BookObjectInputTest.main(null);
+		}
+	
+	void searchAuthor(){
+		String aut = s.next();
+		for(int i = 0; i < list.size(); i++){
+			System.out.println(list.get(i).equals(aut));
+		}
+	}
+	
+	void searchPrice(){
+		
+	}
+	
+	void searchPublisher(){
+		
+	}
+	
+	void searchISBN(){
+		
+	}
+	
+	void searchPubyear(){
+		
+	}
+	
+	void searchPoint(){
+		
+	}
+	void start(){
+		boolean go = true;
+		while(go){
+			System.out.print("1) 도서목록   2)도서검색   3)종료   ");
+			int select = s.nextInt();
+			switch(select){
+			case 1:
+				list();
+				break;
+			case 2:
+				System.out.print("검색 방법을 선택해주세요  1) 저자명  2)단가  3)출판사  4)isbn  5)출판년도  6)인기도   ");
+				int choice = s.nextInt();
+				switch(choice){
+				case 1 :
+					searchAuthor();
+					break;
+				}
+				break;
+			case 3:
+				System.out.println("종료합니다.");
+				go = false;
+				break;
+			}
+		}
+	}
+	public static void main(String[] args) {
+		BookManager t = new BookManager();
+		t.start();
+	}
+}
