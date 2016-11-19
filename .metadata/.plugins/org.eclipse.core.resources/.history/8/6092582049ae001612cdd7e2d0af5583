@@ -150,55 +150,24 @@ public class BookManager {
 	}
 
 	void searchPrice(){
-		System.out.print("검색하실 금액을 입력해 주세요.(입력 금액 이하의 책을 검색합니다.)  ");
-		int pri = s.nextInt();
-		for(int i = 0; i < books.size(); i++){
-			if(books.get(i).getPrice() <= pri){
-				System.out.println(books.get(i).toString());
-			}
-		}
+
 	}
 
 	void searchPublisher(){
-		System.out.print("검색하실 출판사를 입력해 주세요.  ");
-		String publish = s.next();
-		for(int i = 0; i < books.size(); i++){
-			if(books.get(i).getPublisher().equals(publish)){
-				System.out.println(books.get(i).toString());
-			}
-		}
+
 	}
 
 	void searchISBN(){
-		System.out.print("검색하실 ISBN을 입력해 주세요.  ");
-		String isbn = s.next();
-		for(int i = 0; i < books.size(); i++){
-			if(books.get(i).getIsbn().equals(isbn)){
-				System.out.println(books.get(i).toString());
-			}
-		}
+
 	}
 
 	void searchPubyear(){
-		System.out.print("검색하실 출판년도를 입력해 주세요.(입력하신 연도 이전에 출시된 책을 검색합니다.)  ");
-		int year = s.nextInt();
-		for(int i = 0; i < books.size(); i++){
-			if(books.get(i).getPubyear() <= year){
-				System.out.println(books.get(i).toString());
-			}
-		}
+
 	}
 
 	void searchPoint(){
-		System.out.print("검색하실 인기도를 입력해 주세요.(입력하신 인기도 이상의 책을 검색합니다.)  ");
-		int poin = s.nextInt();
-		for(int i = 0; i < books.size(); i++){
-			if(books.get(i).getPoint() >= poin){
-				System.out.println(books.get(i).toString());
-			}
-		}
+
 	}
-	
 	void start(){
 		boolean go = true;
 		while(go){
@@ -211,26 +180,11 @@ public class BookManager {
 				break;
 			case 2:
 				System.out.println("검색 방법을 선택해주세요");
-				System.out.print("1) 저자명  2)단가  3)출판사  4)isbn  5)출판년도  6)인기도    ");
+				System.out.print("1) 저자명  2)단가  3)출판사  4)isbn  5)출판년도  6)인기도  ");
 				int choice = s.nextInt();
 				switch(choice){
 				case 1 :
 					searchAuthor();
-					break;
-				case 2 :
-					searchPrice();
-					break;
-				case 3 :
-					searchPublisher();
-					break;
-				case 4 :
-					searchISBN();
-					break;
-				case 5 :
-					searchPubyear();
-					break;
-				case 6 :
-					searchPoint();
 					break;
 				}
 				break;

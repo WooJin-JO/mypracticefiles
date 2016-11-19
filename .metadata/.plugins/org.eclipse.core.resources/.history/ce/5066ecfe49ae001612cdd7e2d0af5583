@@ -170,33 +170,12 @@ public class BookManager {
 	}
 
 	void searchISBN(){
-		System.out.print("검색하실 ISBN을 입력해 주세요.  ");
-		String isbn = s.next();
-		for(int i = 0; i < books.size(); i++){
-			if(books.get(i).getIsbn().equals(isbn)){
-				System.out.println(books.get(i).toString());
-			}
-		}
 	}
 
 	void searchPubyear(){
-		System.out.print("검색하실 출판년도를 입력해 주세요.(입력하신 연도 이전에 출시된 책을 검색합니다.)  ");
-		int year = s.nextInt();
-		for(int i = 0; i < books.size(); i++){
-			if(books.get(i).getPubyear() <= year){
-				System.out.println(books.get(i).toString());
-			}
-		}
 	}
 
 	void searchPoint(){
-		System.out.print("검색하실 인기도를 입력해 주세요.(입력하신 인기도 이상의 책을 검색합니다.)  ");
-		int poin = s.nextInt();
-		for(int i = 0; i < books.size(); i++){
-			if(books.get(i).getPoint() >= poin){
-				System.out.println(books.get(i).toString());
-			}
-		}
 	}
 	
 	void start(){
