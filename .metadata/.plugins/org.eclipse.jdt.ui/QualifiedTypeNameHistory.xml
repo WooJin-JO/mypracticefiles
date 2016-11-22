@@ -36,6 +36,8 @@
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthSpinnerUI"/>
 <fullyQualifiedTypeName name="javax.xml.soap.SAAJResult"/>
+<fullyQualifiedTypeName name="step_H.H04"/>
+<fullyQualifiedTypeName name="step_H.H05"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.util.Random"/>

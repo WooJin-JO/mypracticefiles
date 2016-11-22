@@ -1,0 +1,11 @@
+package step_H;
+
+public class H05 {
+	void run(){
+		
+	}
+	public static void main(String[] args) {
+		H05 t = new H05();
+		t.run();
+	}
+}

@@ -22,15 +22,6 @@ public class H03 {
 				}
 			}
 		}
-		
-		
-		
-		for(i = 0; i < lotto_com.length; i++){
-			System.out.print(lotto_com[i] + "  ");
-		}
-		
-		
-		
 		for(i = 0; i < lotto_user.length; i++){
 			System.out.print("원하는 " + (i+1) + "번째 로또 숫자를 입력하세요.  ");
 			user = s.nextInt();
@@ -58,8 +49,8 @@ public class H03 {
 		System.out.println("입니다.");
 		
 		for(i = 0; i < lotto_com.length; i++){
-			for(count = 0; count < i; count++){
-				if(lotto_user[count] == lotto_com[i]){
+			for(count = 0; count < lotto_user.length; count++){
+				if(lotto_com[i] == lotto_user[count]){
 					match_count++;
 				}
 			}
