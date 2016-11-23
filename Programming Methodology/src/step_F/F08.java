@@ -8,7 +8,7 @@ public class F08 {
 		int[] number = new int[10];
 		int newnum = 0;
 		int count = 0;
-		boolean dup;
+		//boolean dup;
 		int i = 0;
 		System.out.println("1부터 100사이의 숫자를 입력하시오.");
 		while(0 <= newnum && newnum <= 100 && count < 10){
@@ -28,7 +28,7 @@ public class F08 {
 			}
 		for(i = 0; i < 10; i++){
 			System.out.println((i+1) + "번째 숫자는 " + number[i] + "입니다.");
-		}
+		}s.close();
 	}
 	public static void main(String[] args) {
 		F08 t = new F08();
