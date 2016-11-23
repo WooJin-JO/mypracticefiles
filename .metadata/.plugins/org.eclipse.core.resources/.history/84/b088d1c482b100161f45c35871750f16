@@ -1,0 +1,40 @@
+package step_G;
+
+import java.util.Scanner;
+
+public class G04 {
+	void run(){
+		Scanner s = new Scanner(System.in);
+		int kind;//거래종류(1:매매, 2:임대, 0:계산종료)
+		int money;//거래금액
+		int charge;//중개 수수료
+		int total_charge;//수수료 총액
+		System.out.print("부동산 거래종류(1:매매, 2:임대, 0:계산종료)를 입력하세요. :  ");
+		kind = s.nextInt();
+		if(kind != 1 || kind != 2 || kind != 0){
+			System.out.print("부동산 거래종류(1:매매, 2:임대, 0:계산종료)를 입력하세요. :  ");
+			kind = s.nextInt();
+		}
+		System.out.print("부동산 거래금액(원)을 입력하세요 :  ");
+		money = s.nextInt();
+		if(kind == 1){
+			if(money < 50000000){
+				charge = (int)(money * 0.006);
+				if(charge > 250000){
+					charge = 250000;
+				}
+			}else if(money < 200000000){
+				charge = (int)(money * 0.005);
+				if(charge > 800000){
+					charge = 800000;
+				}
+			}else{
+				charge = (int)(money * 0.004);
+			}
+		}
+	}
+	public static void main(String[] args) {
+		G04 t = new G04();
+		t.run();
+	}
+}

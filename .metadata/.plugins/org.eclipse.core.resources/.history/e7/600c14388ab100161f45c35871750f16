@@ -1,0 +1,19 @@
+package step_G;
+
+import java.util.Scanner;
+
+public class G06 {
+	void run(){
+		Scanner s = new Scanner(System.in);
+		int[] order = {0, 0, 0};
+		int[] total_order = {0, 0, 0};
+		int sale;
+		int total_sale;
+		int[] price = {1000, 6000, 3000};
+		int i;
+	}
+	public static void main(String[] args) {
+		G06 t = new G06();
+		t.run();
+	}
+}

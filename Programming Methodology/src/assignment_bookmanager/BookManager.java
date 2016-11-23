@@ -83,6 +83,7 @@ public class BookManager {
 			fin = new FileInputStream("booklist.dat");
 			ois = new ObjectInputStream(fin);
 
+			@SuppressWarnings("unchecked")
 			ArrayList<Book> list = (ArrayList<Book>)ois.readObject();
 			Book b1 = (Book)list.get(0);
 			Book b2 = (Book)list.get(1);

@@ -1,0 +1,13 @@
+package step_G;
+
+public class G06 {
+	void run(){
+		Scanner s = new Scanner(System.in);
+		int[] order = {0, 0, 0};
+		
+	}
+	public static void main(String[] args) {
+		G06 t = new G06();
+		t.run();
+	}
+}

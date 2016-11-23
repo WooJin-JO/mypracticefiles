@@ -1,0 +1,41 @@
+package step_G;
+
+import java.util.Scanner;
+
+public class G06 {
+	void run(){
+		Scanner s = new Scanner(System.in);
+		int[] order = {1, 1, 1};//입력받는 구매 제품 개수(가죽장갑, 털장갑, 비닐장갑)
+		int[] total_order = {0, 0, 0};//총 판매 개수(가죽장갑, 털장갑, 비닐장갑)
+		int sale = 0;//매출액
+		int total_sale = 0;//총 매출액
+		int[] price = {10000, 6000, 3000};//제품별 가격
+		int i;
+		System.out.println("세 종류의 제품이 있습니다.");
+		System.out.println("(1.가죽장갑 1만원,  2.털장갑 6천원,  3.비닐장갑 3천원)");
+		while(order[0] != 0 || order[1] != 0 || order[2] != 0){
+			if(order[0] == 0 && order[1] == 0 && order[2] == 0){
+				break;
+			}
+			System.out.println();
+			for(i = 0; i < order.length; i++){
+				System.out.print((i+1) + "번 제품은 몇개를 구입하실래요?");
+				order[i] = s.nextInt();
+				total_order[i] += order[i];
+				sale += (order[i] * price[i]);
+			}
+			if(order[0] != 0 || order[1] != 0 || order[2] != 0){
+				System.out.println("판매 금액은 " + sale + "원 입니다.");
+			}
+			total_sale += sale;
+			sale = 0;
+		}System.out.println("지금까지의 총 매출 금액은 " + total_sale + "원 입니다.");
+		for(i = 0; i < order.length; i++){
+			System.out.println((i+1) + "번 제품의 총 판매 갯수는 " + total_order[i] + "개 입니다.");
+		}s.close();
+	}
+	public static void main(String[] args) {
+		G06 t = new G06();
+		t.run();
+	}
+}

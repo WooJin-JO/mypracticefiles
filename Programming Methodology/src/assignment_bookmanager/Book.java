@@ -2,6 +2,7 @@ package assignment_bookmanager;
 
 import java.io.Serializable;
 
+@SuppressWarnings("serial")
 public class Book implements Serializable {
 	private String isbn;
 	private String title;

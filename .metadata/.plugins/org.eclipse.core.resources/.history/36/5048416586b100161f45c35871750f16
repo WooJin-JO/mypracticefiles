@@ -1,0 +1,17 @@
+package step_G;
+
+import java.util.Scanner;
+
+public class G05 {
+	void run(){
+		Scanner s = new Scanner(System.in);
+		int hour;
+		int minute;
+		int charge;
+		int total_charge;
+	}
+	public static void main(String[] args) {
+		G05 t = new G05();
+		t.run();
+	}
+}
