@@ -1,0 +1,9 @@
+package lab_Server;
+
+public class MainClient {
+	public static void main(String[] args) {
+		try{
+			Socket c_socket = new Socket("127.0.0.1", 8888);
+		}
+	}
+}

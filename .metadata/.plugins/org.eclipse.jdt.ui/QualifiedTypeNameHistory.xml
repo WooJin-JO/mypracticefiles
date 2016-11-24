@@ -19,13 +19,10 @@
 <fullyQualifiedTypeName name="javax.annotation.Generated"/>
 <fullyQualifiedTypeName name="java.io.FileReader"/>
 <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
-<fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="practice.AddFriend"/>
 <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
-<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
 <fullyQualifiedTypeName name="java.io.FileWriter"/>
-<fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="java.io.Serializable"/>
 <fullyQualifiedTypeName name="assignment_bookmanager.BookManager"/>
 <fullyQualifiedTypeName name="assignment_bookmanager.BookObjectOutputTest"/>
@@ -42,10 +39,20 @@
 <fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
 <fullyQualifiedTypeName name="step_H.H07"/>
 <fullyQualifiedTypeName name="step_H.H09"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="step_G.G04"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="step_G.G05"/>
 <fullyQualifiedTypeName name="step_G.G06"/>
+<fullyQualifiedTypeName name="java.net.ServerSocket"/>
+<fullyQualifiedTypeName name="java.net.Socket"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.io.OutputStream"/>
+<fullyQualifiedTypeName name="practice.page_49"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
 </qualifiedTypeNameHistroy>

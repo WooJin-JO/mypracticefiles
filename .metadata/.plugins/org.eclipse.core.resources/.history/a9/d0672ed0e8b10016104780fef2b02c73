@@ -1,0 +1,21 @@
+package lab_Server;
+
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class MainServer {
+	public static void main(String[] args) {
+		try{
+			ServerSocket s_socket = new ServerSocket(8888);
+			Socket c_socket = s_socket.accept();
+			InputStreamReader = c_socket.getInputStream();
+			
+			String send = "Client start";
+		}catch(IOException e){
+			
+		}
+	}
+}

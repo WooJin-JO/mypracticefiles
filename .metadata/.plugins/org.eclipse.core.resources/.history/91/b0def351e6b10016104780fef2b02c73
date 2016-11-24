@@ -1,0 +1,13 @@
+package lab_Server;
+
+import java.net.ServerSocket;
+
+public class MainServer {
+	public static void main(String[] args) {
+		try{
+			ServerSocket s_scoket = new ServerSocket(8888);
+			Socket c_scoket = s_socket.accept();
+			
+		}
+	}
+}
