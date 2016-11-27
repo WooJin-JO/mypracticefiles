@@ -13,7 +13,6 @@ import java.net.Socket;
 public class MainServer {
 	public static void main(String[] args) {
 		try{
-			@SuppressWarnings("resource")
 			ServerSocket s_socket = new ServerSocket(8888);
 			Socket c_socket = s_socket.accept();
 			System.out.println("Server Start");
