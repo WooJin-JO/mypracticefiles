@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;B2557.java&apos; to &apos;practice/src/practice&apos;&#x0D;&#x0A;- Original project: &apos;BaekJoon_Algorithm&apos;&#x0D;&#x0A;- Destination element: &apos;practice/src/practice&apos;&#x0D;&#x0A;- Original element: &apos;practice.B2557.java&apos;" description="Copy compilation unit" destination="=practice/src&lt;practice" element1="/src&lt;practice{B2557.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1480310799376" units="1" version="1.0"/>
+</session>
