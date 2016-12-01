@@ -1,0 +1,17 @@
+package lab_08_02;
+
+public class SynchronizedEx {
+	public static void main(String[] args) {
+		
+		int[] ten = {10, 20, 30, 40, 50};
+		int[] hundread = {100, 200, 300};
+		
+		Thread th1 = new TimerThread(one);
+		Thread th2 = new TimerThread(ten);
+		Thread th3 = new TimerThread(hundread);
+		
+		th1.start();
+		th2.start();
+		th3.start();
+	}
+}

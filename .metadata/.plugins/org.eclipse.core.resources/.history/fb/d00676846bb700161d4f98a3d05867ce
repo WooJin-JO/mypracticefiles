@@ -1,0 +1,14 @@
+package lab_08_02;
+
+class TimerThread extends Thread{
+	int n;
+	public TimerThread(int[] one){
+		this.n = one;
+	}
+	public void run(){
+		int n = 1;
+		while(true){
+			n.setText(Integer.toString(n));
+		}
+	}
+}

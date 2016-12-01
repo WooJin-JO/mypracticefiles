@@ -1,0 +1,15 @@
+package lab_08_02;
+
+class TimerThread extends Thread{
+	int[] n;
+	public TimerThread(int[] one){
+		this.n = one;
+	}
+	public void run(){
+		int i = 0;
+		int[] one = {1, 2, 3, 4, 5, 6, 7, 8};
+		while(int i < one.lenth()){
+			System.out.println(one[i]);
+		}
+	}
+}
