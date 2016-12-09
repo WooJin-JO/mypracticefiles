@@ -1,0 +1,9 @@
+package student_information_management;
+
+import java.util.ArrayList;
+
+public class Person {
+	private Person(String name, boolean sex, String address, String tel){
+		
+	}
+}

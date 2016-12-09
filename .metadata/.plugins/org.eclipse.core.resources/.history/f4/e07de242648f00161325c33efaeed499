@@ -1,0 +1,8 @@
+package student_information_management;
+
+public class Run extedns StudentManager {
+	public static void main(String[] args) {
+	Run t = new Run();
+	t.start();
+	}
+}

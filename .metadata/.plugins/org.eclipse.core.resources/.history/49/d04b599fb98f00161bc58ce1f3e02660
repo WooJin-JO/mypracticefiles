@@ -1,0 +1,14 @@
+package student_information_management;
+
+public class Run extends StudentManager {
+
+	public Run(String name, String studentid, String gender, String address, String tel, boolean backtoschool) {
+		super(name, studentid, gender, address, tel, backtoschool);
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		Run t = new Run();
+		t.start();
+	}
+}

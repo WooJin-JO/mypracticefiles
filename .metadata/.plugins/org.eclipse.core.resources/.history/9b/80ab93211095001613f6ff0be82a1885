@@ -1,0 +1,94 @@
+package midtestpractice2;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+publin class AccountManager {
+	Scanner s = new Scanner(System.in);
+	ArrayList<AccountManager> account = new ArrayList<AccountManager>();
+	public AccountManager(int an, String n, int aa, int c){
+
+	}
+	void addAcount(){
+		System.out.println("통장을 새로 개설합니다");
+		System.out.println("예금주 이름을 입력해 주세요.");
+		String n = s.next();
+		System.out.println("통장 계설시 입금 할 금액을 입력해 주세요.");
+		int aa = s.nextInt();
+		System.out.println("신용등급을 입력해주세요.(1~3)");
+		int c = s.nextInt();
+		while(!(c == 1 || c == 2 || c == 3)){
+			System.out.println("잘못 입력하셨습니다.");
+			c = s.nextInt();
+		}
+		int an = 0;
+		an++;
+		AccountManager acc = new AccountManager(an, n, aa, c);
+		account.add(acc);
+	}
+	void saveMoney(){
+		int i = 0;
+		System.out.println("입금 할 통장의 번호를 입력해 주세요.");
+		i = s.nextInt() - 1;
+		System.out.println("입금 할 금액을 입력해 주세요.");
+		int save = s.nextInt();
+		account.get(i).account_amount += save;
+		System.out.println("현재 통장 잔액은 " + account.get(i).account_amount + "원 입니다.");
+	}
+	void drawMoney(){
+		int i = 0;
+		System.out.println("출금 할 통장의 번호를 입력해 주세요.");
+		i = s.nextInt() - 1;
+		System.out.println("출금 할 금액을 입력해 주세요.");
+		int draw = s.nextInt();
+		account.get(i).account_amount -= draw;
+		System.out.println("현재 통장 잔액은 " + account.get(i).account_amount + "원 입니다.");
+	}
+	void printAccount(){
+		
+	}
+	void viewAccount(){
+		
+	}
+	void transferMoney(){
+		
+	}
+	void putInsert(){
+		
+	}
+	void start(){
+		boolean go = true;
+		int menu;
+		while(go){
+			System.out.println("메뉴를 선택하세요 : 1.개설  2.입금  3.출금  4.송금  5.이자지급  6.통장내역출력  7.종료");
+			menu = s.nextInt();
+			switch(menu){
+			case 1 :
+				addAcount();
+				break;
+			case 2 :
+				saveMoney();
+				break;
+			case 3 :
+				drawMoney();
+				break;
+			case 4 :
+				transferMoney();
+				break;
+			case 5 :
+				putInsert();
+				break;
+			case 6 :
+				viewAccount();
+				break;
+			case 7 :
+				go = false;
+				break;
+			}
+		}
+	}
+	public static void main(String[] args) {
+		AccountManager test = new AccountManager(0, null, 0, 0);
+		test.start();
+	}
+}

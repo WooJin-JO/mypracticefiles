@@ -1,19 +1,10 @@
-package chatThread;
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
-import java.net.InetAddress;
-import java.net.ServerSocket;
-import java.net.Socket;
+import java.net.*;
+import java.io.*;
 
 public class EchoThreadServer {
 
 	public static void main(String[] args) {
 		try{
-			@SuppressWarnings("resource")
 			ServerSocket server = new ServerSocket(10001);
 			System.out.println("접속을 기다립니다.");
 			while(true){

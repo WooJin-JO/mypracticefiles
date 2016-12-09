@@ -1,0 +1,10 @@
+package student_information_management;
+
+class Student extends Person {
+	String studentid;
+	Boolean backtoschool;
+	private Student(String name, String studentid, String sex, String address, String tel, Boolean backtoschool){
+		studentid = "";
+		backtoschool = true;
+	}
+}

@@ -1,0 +1,11 @@
+package midtestpractice;
+
+public class Run {
+
+	public static void main(String[] args) {
+		ScoreManager t = new ScoreManager(0, 0, 0, 0, 0, null);
+		t.start();
+
+	}
+
+}

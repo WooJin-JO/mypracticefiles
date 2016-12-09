@@ -1,0 +1,17 @@
+package student_information_management;
+
+import java.util.Scanner;
+
+public class Person {
+	String name;
+	String sex;
+	String address;
+	String tel;
+	public Person(){
+		name = s.nextLine();
+		sex = s.nextLine();
+		address = s.nextLine();
+		tel = s.nextLine();
+	}
+	Scanner s = new Scanner(System.in);
+}

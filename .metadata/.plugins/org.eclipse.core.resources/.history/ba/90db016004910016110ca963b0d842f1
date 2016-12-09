@@ -1,0 +1,54 @@
+package midtestpractice;
+
+public class Score {
+	private int no, home, away, h_score, a_score;
+	// 경기일련번호(int), 홈팀번호(int), 원정팀번호(int), 홈팀점수(int), 원정팀점수(int);
+	String date; //경기일자(String)
+	public Score(int n, int h, int a, int s1, int s2, String d){
+		no = n;
+		home = h;
+		away = a;
+		h_score = s1;
+		a_score = s2;
+		date = d;
+	}
+	public int getNo() {
+		return no;
+	}
+	public void setNo(int no) {
+		this.no = no;
+	}
+	public int getHome() {
+		return home;
+	}
+	public void setHome(int home) {
+		this.home = home;
+	}
+	public int getAway() {
+		return away;
+	}
+	public void setAway(int away) {
+		this.away = away;
+	}
+	public int getH_score() {
+		return h_score;
+	}
+	public void setH_score(int h_score) {
+		this.h_score = h_score;
+	}
+	public int getA_score() {
+		return a_score;
+	}
+	public void setA_score(int a_score) {
+		this.a_score = a_score;
+	}
+	public String getDate() {
+		return date;
+	}
+	public void setDate(String date) {
+		this.date = date;
+	}
+	public String toString(){
+		return 
+	}
+}

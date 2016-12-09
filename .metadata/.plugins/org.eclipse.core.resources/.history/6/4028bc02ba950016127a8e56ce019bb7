@@ -1,0 +1,103 @@
+package midtestpractice4;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class AccountManager {
+	Scanner s = new Scanner(System.in);
+	ArrayList<BankAccount> bank = new ArrayList<BankAccount>();
+	int account_count = 0;
+	public AccountManager(){
+	}
+	//통장개설(addAccount)
+	void addAccount(){
+		int an = 0;
+		String n = null;
+		int aa = 0;
+		int c = 0;
+		System.out.println("새로운 통장을 개설합니다.");
+		System.out.println("예금주 이름을 입력해주세요");
+		n = s.next();
+		System.out.println("개설시 입금할 금액을 입력해주세요.");
+		aa = s.nextInt();
+		System.out.println("신용등급을 입력해주세요.");
+		c =s.nextInt();
+		an++;
+		BankAccount account = new BankAccount(an, n, aa, c);
+		bank.add(account);
+	}
+	//특정통장에입금하기(saveMoney)
+	void saveMoney(){
+		System.out.println("입금하실 통장번호를 입력해주세요.");
+		int num = s.nextInt() - 1;
+		System.out.println("입금하실 금액을 입력해주세요.");
+		int save = s.nextInt();
+		bank.get(num).account_amount += save;
+		System.out.println((num + 1) + "번 통장의 현재 잔액은 " + bank.get(num).account_amount + "원 입니다.");
+	}
+	//정통장에서출금하기(drawMoney)
+	void drawMoney(){
+		System.out.println("출금하실 통장번호를 입력해주세요.");
+		int num = s.nextInt() - 1;
+		System.out.println("출금하실 금액을 입력해주세요.");
+		int draw = s.nextInt();
+		if bank.get(num).account_amount < draw){
+			if(bank.get(num).credit == 1){
+			}
+		}
+	}
+	//통장내역출력(printAccount)
+	void printAccount(){
+		
+	}
+	//통장정보확인(viewAccount)
+	void viewAccount(){
+		
+	}
+	//송금하기(transferMoney)
+	void transferMoney(){
+		
+	}
+	//모든통장이자지급하기(putInterest)
+	void putInterest(){
+		
+	}
+	void start(){
+		boolean go = true;
+		int select;
+		System.out.println("메뉴를 선택하세요. (1:개설  2:입금  3:출금 4:송금  5:이자지급  6:통장정보확인  7:통장내역출력  8:종료)");
+		select = s.nextInt();
+		while(go){
+			switch(select){
+			case 1 :
+				addAccount();
+				break;
+			case 2 :
+				saveMoney();
+				break;
+			case 3:
+				drawMoney();
+				break;
+			case 4 :
+				transferMoney();
+				break;
+			case 5 :
+				putInterest();
+				break;
+			case 6 :
+				viewAccount();
+				break;
+			case 7 :
+				printAccount();
+				break;
+			case 8 :
+				go = false;
+				break;
+			}
+		}
+	}
+	public static void main(String[] args) {
+		AccountManager t = new AccountManager();
+		t.start();
+	}
+}

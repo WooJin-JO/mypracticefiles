@@ -1,0 +1,31 @@
+package student_information_management;
+
+public class Student extends Person {
+	private String studentid;
+	private String backtoschool;
+	Student stu;
+	public String getStudentid() {
+		return studentid;
+	}
+	public void setStudentid(String studentid) {
+		this.studentid = studentid;
+	}
+	public String getBacktoschool() {
+		return backtoschool;
+	}
+	public void setBacktoschool(String backtoschool) {
+		this.backtoschool = backtoschool;
+	}
+	public Student(String name, String studentid, String gender, String address, String tel, String backtoschool){
+		super(name, gender, address, tel);
+		setName(name);
+		setStudentid(studentid);
+		setGender(gender);
+		setAddress(address);
+		setTel(tel);
+		setBacktoschool(backtoschool);
+	}
+	public String toString() {
+		return getName() + "		" + getStudentid() + "		" + getGender() + "		" + getAddress() + "		" + getTel() + "		" + getBacktoschool();
+		}
+}

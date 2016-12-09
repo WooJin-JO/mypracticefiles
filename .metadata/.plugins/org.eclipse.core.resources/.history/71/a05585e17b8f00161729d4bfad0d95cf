@@ -1,0 +1,13 @@
+package student_information_management;
+
+public class Run extends StudentManager {
+
+	public Run(String name, String studentid, String sex, String address, String tel, boolean backtoschool) {
+		super(name, studentid, sex, address, tel, backtoschool);
+	}
+
+	public static void main(String[] args) {
+		Run t = new Run();
+		t.start();
+	}
+}

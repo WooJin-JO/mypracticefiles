@@ -1,0 +1,15 @@
+package midtestpractice2;
+
+public class BankAccount {
+	int account_num = 0;
+	String name;
+	int account_balance = 0;
+	int credit = 0;
+	public BankAccount(int an, String n, int ab, int c){
+		account_name = an;
+		name = n;
+		account_balance = ab;
+		credit =c;
+	}
+
+}

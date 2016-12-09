@@ -1,0 +1,11 @@
+package student_information_management;
+
+public class Student extends Person {
+	String studentid;
+	String answer;
+	Boolean backtoschool;
+	public Student(String name, String studentid, String sex, String address, String tel, Boolean backtoschool){
+		studentid = "";
+		backtoschool = (answer.equalsIgnoreCase("Y") ? true : false);
+	}
+}
