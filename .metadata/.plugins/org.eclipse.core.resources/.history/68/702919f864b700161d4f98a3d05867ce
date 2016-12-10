@@ -1,6 +1,0 @@
-package lab_08;
-
-class TimerThread extends Thread {
-	JLabel timerLabel;
-	
-}

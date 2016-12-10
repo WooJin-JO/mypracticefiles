@@ -1,8 +1,0 @@
-package lab_08;
-
-public class ThreadTimerEx extends JFrame {
-	public ThreadTimerEx(){
-		setTitle("Thread를 상속받은 타이머 스레드 예제");
-		setD
-	}
-}
