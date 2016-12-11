@@ -16,9 +16,7 @@ public class EchoClient{
 			//반환받은 Socket으로부터 InputStream과 OutputStream을 구함
 			OutputStream out = sock.getOutputStream();
 			InputStream in = sock.getInputStream();
-			//OutputStream을 OutputStreamWriter을 통해 PrintWriter 형식으로 변환
 			PrintWriter pw = new PrintWriter(new OutputStreamWriter(out));
-			//InputStream을 InputStreamReader을 통해 BufferedReader 형식으로 변환
 			BufferedReader br = new BufferedReader(new InputStreamReader(in));
 			String line = null;
 			while((line = keyboard.readLine()) != null){
