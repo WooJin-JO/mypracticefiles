@@ -21,8 +21,7 @@ import java.util.HashMap;
 9.매크로(client에서 구현/ 몇 초에 한번씩 메세지 전송)
 ----------------------수업(2016.12.13)----------------------
 10.혼자말(자기 value로 보내기)
-11.욕설 필터(몇 회 이상시 채팅방에서 강퇴)
- */
+*/     
 
 public class ChatServer {
 
@@ -38,7 +37,7 @@ public class ChatServer {
 				ChatThread chatthread = new ChatThread(sock, hm);
 				chatthread.start();
 			} // while
-			//오류를 잡기
+		//오류를 잡기
 		}catch(Exception e){
 			System.out.println(e);
 		}
@@ -84,18 +83,16 @@ class ChatThread extends Thread{
 				//귓속말
 				if(line.indexOf("/to ") == 0){
 					sendmsg(line);
-					//종료와 귓속말이 아니면 broadcast를 통해 모두에게 말한다.
+				//종료와 귓속말이 아니면 broadcast를 통해 모두에게 말한다.
 				}else if(line.indexOf("/self ") == 0){
 					selfmsg(line);
-				}else if(line.indexOf("/userlist ") == 0){
-					userlist();
 				}else
 					broadcast(id + " : " + line);
 			}
-			//오류 잡기.
+		//오류 잡기.
 		}catch(Exception ex){
 			System.out.println(ex);
-			//Finally : try에서 Error가 나더라도 반드시 실행해준다.
+		//Finally : try에서 Error가 나더라도 반드시 실행해준다.
 		}finally{
 			synchronized(hm){
 				hm.remove(id);
@@ -114,7 +111,7 @@ class ChatThread extends Thread{
 		if(end != -1){
 			String to = msg.substring(start, end);
 			String msg2 = msg.substring(end+1);
-
+			
 			Object obj = hm.get(to);
 			if(obj != null){
 				PrintWriter pw = (PrintWriter)obj;
@@ -140,28 +137,6 @@ class ChatThread extends Thread{
 	} // broadcast
 	public void selfmsg(String msg){
 		String msg2 = msg.substring(6);
-		synchronized (hm){
-			Object obj = hm.get(id);
-			if(obj != null){
-				PrintWriter pw = (PrintWriter)obj; 
-				pw.println("혼자말: " + msg2);
-				pw.flush();
-			}
-		}
-	}
-	public void userlist(){
-		synchronized(hm){
-			Collection collection = hm.keySet();
-			Iterator iter = collection.iterator();
-			Object obj = hm.get(id);
-			if(obj != null){
-				PrintWriter pw = (PrintWriter)obj;
-				while(iter.hasNext()){
-					String str = (String)iter.next();
-					pw.println(str);
-					pw.flush();
-				}
-			}
-		}
+		pw.println("혼자말: " + msg);
 	}
 }
