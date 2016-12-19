@@ -12,6 +12,7 @@ public class EchoServer {
 
 	public static void main(String[] args) {
 		try{
+			@SuppressWarnings("resource")
 			ServerSocket server = new ServerSocket(10001);
 			System.out.println("접속을 기다립니다.");
 			Socket sock = server.accept();//server에 접속
