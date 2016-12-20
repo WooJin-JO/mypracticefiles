@@ -90,7 +90,9 @@ class ChatThread extends Thread{
 					selfmsg(line);
 				}else if(line.indexOf("/userlist ") == 0){
 					userlist();
-				}else
+				}else if(line.indexOf("/stopchat") == 0){
+					stopchat();
+				}else 
 					broadcast(id + " : " + line);
 			}
 			//오류 잡기.
@@ -163,6 +165,20 @@ class ChatThread extends Thread{
 					pw.flush();
 				}
 			}
+		}
+	}
+	public void stopchat(){
+		Collection collection = hm.values();
+		Iterator iter = collection.iterator();
+		while(iter.hasNext()){
+			PrintWriter pw = (PrintWriter)iter.next();
+			pw.println("10초가 채팅을 멈춥니다.");
+			pw.flush();
+			}
+		try{
+			Thread.sleep(10000);
+		}catch(InterruptedException e){
+			return;
 		}
 	}
 }
